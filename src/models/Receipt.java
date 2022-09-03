@@ -1,3 +1,5 @@
+package models;
+
 import enums.ProductCategory;
 import service.Operation;
 

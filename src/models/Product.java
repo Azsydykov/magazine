@@ -1,3 +1,5 @@
+package models;
+
 import enums.MeasureType;
 import enums.ProductCategory;
 

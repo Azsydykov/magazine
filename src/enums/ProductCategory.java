@@ -1,5 +1,9 @@
 package enums;
 
 public enum ProductCategory {
-    DAIRY
+    DAIRY,
+    FRUIT,
+    BEVERAGES,
+    VEGETABLES;
+
 }

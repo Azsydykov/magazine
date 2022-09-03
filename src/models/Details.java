@@ -1,3 +1,5 @@
+package models;
+
 public class Details {
 
     private Product product;

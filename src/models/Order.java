@@ -1,4 +1,6 @@
+package models;
 
+import models.Details;
 
 public class Order {
     private Cashier cashier;
