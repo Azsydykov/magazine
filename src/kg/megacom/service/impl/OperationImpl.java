@@ -1,10 +1,9 @@
-package service.impl;
+package kg.megacom.service.impl;
 
-import enums.MeasureType;
-import enums.ProductCategory;
-import models.Product;
-import models.Sugar;
-import service.Operation;
+import kg.megacom.*;
+import kg.megacom.enums.ProductCategory;
+import kg.megacom.enums.MeasureType;
+import kg.megacom.service.Operation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +12,18 @@ import java.util.List;
 public class OperationImpl implements Operation {
 
     List<Product> products = new ArrayList<>();
+   
+
+
+    @Override
+    public Receipt getReceipt(Order order) {
+        return null;
+    }
+
+    @Override
+    public Cashier getCashier(String name) {
+        return null;
+    }
 
     @Override
     public ProductCategory[] getProductCategories() {
@@ -21,7 +32,7 @@ public class OperationImpl implements Operation {
         return ProductCategory.values();
     }
 
-    public List<Product> getProductsByCategory(ProductCategory category) {
+    public List<Product> getProductsByCategory (ProductCategory category) {
         List<Product> list = new ArrayList<>();
         products.forEach(x -> {
             if (x.getProductCategory() == category) list.add(x);
@@ -40,4 +51,14 @@ public class OperationImpl implements Operation {
         List<Product> list = getProductsByCategory(ProductCategory.VEGETABLES);
         //print
     }
+
+    @Override
+    public void categorySelection(ProductCategory productCategory) {
+
+
+
+
+        
+    }
+
 }

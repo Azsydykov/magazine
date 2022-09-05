@@ -1,7 +1,4 @@
-package models;
-
-import enums.ProductCategory;
-import service.Operation;
+package kg.megacom;
 
 public class Receipt  {
     private double sum;

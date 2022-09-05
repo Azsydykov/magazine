@@ -1,6 +1,4 @@
-package models;
-
-import models.Details;
+package kg.megacom;
 
 public class Order {
     private Cashier cashier;
