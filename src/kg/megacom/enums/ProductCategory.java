@@ -6,14 +6,15 @@ public enum ProductCategory {
     BEVERAGES ("Напитки"),
     VEGETABLES ("Овощи");
 
-private String name;
+private String val;
 
 ProductCategory(String name){
-    this.name = name;
+    this.val = val;
 }
 
     @Override
     public String toString() {
-        return name;
+        return val;
     }
+
 }

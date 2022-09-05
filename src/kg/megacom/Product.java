@@ -9,7 +9,7 @@ public abstract class Product {
     private MeasureType measureType;
     private ProductCategory productCategory;
 
-
+public Product(){};
 
     public String getName() {
         return name;

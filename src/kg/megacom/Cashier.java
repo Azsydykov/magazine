@@ -5,14 +5,14 @@ public class Cashier {
 
     private String name;
     private String login;
-    private byte age;
-    private long id;
+    private int age;
 
-    public Cashier(String name, String login, byte age, long id) {
+
+    public Cashier(String name, String login, int age) {
         this.name = name;
         this.login = login;
         this.age = age;
-        this.id = id;
+
     }
 
     public String getLogin() {
@@ -23,21 +23,14 @@ public class Cashier {
         this.login = login;
     }
 
-    public byte getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(byte age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

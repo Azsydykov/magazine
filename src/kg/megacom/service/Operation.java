@@ -11,14 +11,10 @@ import java.util.List;
 
 public interface Operation {
 
+
     Receipt getReceipt (Order order);
-    Cashier getCashier(String name);
-    ProductCategory[] getProductCategories();
-    public List<Product>  getProductsByCategory(ProductCategory category);
 
-
-    void getVegetables();
-
-    void categorySelection(ProductCategory productCategory);
+    void getCategory();
+    Product[] getProductCategories(String category);
 
 }
