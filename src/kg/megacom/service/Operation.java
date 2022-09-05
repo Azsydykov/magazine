@@ -16,7 +16,7 @@ public interface Operation {
     ProductCategory[] getProductCategories();
     public List<Product>  getProductsByCategory(ProductCategory category);
 
-void addSugar();
+
     void getVegetables();
 
     void categorySelection(ProductCategory productCategory);

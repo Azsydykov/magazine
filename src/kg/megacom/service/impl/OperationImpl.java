@@ -5,14 +5,25 @@ import kg.megacom.enums.ProductCategory;
 import kg.megacom.enums.MeasureType;
 import kg.megacom.service.Operation;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class OperationImpl implements Operation {
 
-    List<Product> products = new ArrayList<>();
-   
+    ArrayList<Product> products = new ArrayList<>();
+
+
+
+    Sugar sugar = new Sugar ("Сахар", 90, MeasureType.Kg, ProductCategory.DAIRY);
+    Water water = new Water("Вода", 25, MeasureType.L, ProductCategory.BEVERAGES);
+    Tomato tomato = new Tomato("Помидор", 45, MeasureType.Kg, ProductCategory.VEGETABLES);
+    Apple apple = new Apple("Яблоко", 110, MeasureType.Kg, ProductCategory.FRUIT);
+
+    Cashier aibek = new Cashier("Айбек", "aiba", (byte) 24, 1);
+    Cashier jibek = new Cashier("Жибек", "jiba", (byte) 22, 2);
+
 
 
     @Override
@@ -40,12 +51,6 @@ public class OperationImpl implements Operation {
         return list;
     }
 
-    @Override
-    public void addSugar() {
-        Sugar sugar = new Sugar("Сахар", 90, MeasureType.Kg, ProductCategory.DAIRY);
-        products.add(sugar);
-
-    }
 
     public void getVegetables() {
         List<Product> list = getProductsByCategory(ProductCategory.VEGETABLES);
