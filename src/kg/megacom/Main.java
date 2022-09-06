@@ -16,16 +16,13 @@ public class Main {
         System.out.println("Добро пожаловать");
         System.out.println("Выберите категорию продуктов");
 
-       operation.getCategory();
+        operation.getCategory();
         String category = scanner.next();
 
-       Product[] products = operation.getProductCategories(category);
+        Product[] products = operation.getProductCategories(category);
 
 
 
-
-      //  ProductCategory[] productCategories = operation.getProductCategories();
-      //System.out.println(Arrays.toString(ProductCategory.values()));
 
 
 

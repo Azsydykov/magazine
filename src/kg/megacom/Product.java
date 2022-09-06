@@ -49,4 +49,14 @@ public Product(){};
         this.measureType = measureType;
         this.productCategory = productCategory;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", cost=" + cost +
+                ", measureType=" + measureType +
+                ", productCategory=" + productCategory +
+                '}';
+    }
 }

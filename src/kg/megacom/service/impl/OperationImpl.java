@@ -12,9 +12,7 @@ import java.util.List;
 public class OperationImpl implements Operation {
 
 
-
-
-    Sugar sugar = new Sugar ("Сахар", 90, MeasureType.Kg, ProductCategory.DAIRY);
+    Sugar sugar = new Sugar("Сахар", 90, MeasureType.Kg, ProductCategory.DAIRY);
     Water water = new Water("Легенда", 25, MeasureType.L, ProductCategory.BEVERAGES);
     Tomato tomato = new Tomato("Помидор", 45, MeasureType.Kg, ProductCategory.VEGETABLES);
     Apple apple = new Apple("Яблоко", 110, MeasureType.Kg, ProductCategory.FRUIT);
@@ -22,7 +20,7 @@ public class OperationImpl implements Operation {
     Cashier aibek = new Cashier("Айбек", "aiba", 24);
     Cashier jibek = new Cashier("Жибек", "jiba", 22);
 
-Product[] products = {sugar, water, tomato, apple};
+    Product[] products = {sugar, water, tomato, apple};
 
 
     @Override
@@ -32,23 +30,22 @@ Product[] products = {sugar, water, tomato, apple};
 
     @Override
     public void getCategory() {
-        for (ProductCategory item: ProductCategory.values()){
+        for (ProductCategory item : ProductCategory.values()) {
             System.out.println(item.name());
         }
     }
 
     @Override
     public Product[] getProductCategories(String category) {
-        Product[] result = new Product[100];
+        Product[] result = new Product[10];
 
-        for (Product product : products){
-            if (product.getProductCategory().equals(category)){
-            result[0] = product;
+            for (int i = 0; i < products.length; i++) {
+                if (products[i].getProductCategory().equals(ProductCategory.valueOf(category))) {
+                    result[i] = products[i];
+                }
             }
-        }
 
-        return new Product[0];
+        return result;
+        }
     }
 
-
-}

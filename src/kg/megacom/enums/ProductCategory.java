@@ -8,13 +8,13 @@ public enum ProductCategory {
 
 private String val;
 
-ProductCategory(String name){
+ProductCategory(String val){
     this.val = val;
 }
 
-    @Override
-    public String toString() {
+    public String getVal() {
         return val;
     }
+
 
 }
