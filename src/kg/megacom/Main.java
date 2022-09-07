@@ -33,13 +33,13 @@ public class Main {
 
              }
              System.out.println("Выберите продукт ");
-             String prductName = scanner.next();
-             Product product = operation.getProductByName(prductName);
+             String productName = scanner.next();
+             Product product = operation.getProductByName(productName);
              System.out.println("Выберите количество ");
              int amount = scanner.nextInt();
              System.out.println("Выберите скидку ");
              int discount = scanner.nextInt();
-             Details detail = new Details(product, amount, discount);
+             Details detail = new Details (product, amount, discount);
              details[count]= detail;
 
              System.out.println("Продолжаете? 1 нет, 0 да");
