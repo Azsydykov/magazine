@@ -15,18 +15,46 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         Operation operation = new OperationImpl();
-        System.out.println("Добро пожаловать");
-        System.out.println("Выберите категорию продуктов");
+        byte answer=0;
+        int count =0;
+        System.out.println(count);
+        Details[] details = new Details[10];
+         System.out.println("Добро пожаловать");
+         while (answer !=1){
+             System.out.println("Выберите категорию продуктов");
+              operation.getCategory();
+              String category = scanner.next();
+              Product[] products = operation.getProductByCategory(category);
+             System.out.println(products.length);
 
-        operation.getCategory();
+             for (Product item:products){
+                 if (item!=null)
+                     item.getInfo();
 
-        String category = scanner.next();
+             }
+             System.out.println("Выберите продукт ");
+             String prductName = scanner.next();
+             Product product = operation.getProductByName(prductName);
+             System.out.println("Выберите количество ");
+             int amount = scanner.nextInt();
+             System.out.println("Выберите скидку ");
+             int discount = scanner.nextInt();
+             Details detail = new Details(product, amount, discount);
+             details[count]= detail;
 
-        Product[] products = operation.getProductByCategory(category);
+             System.out.println("Продолжаете? 1 нет, 0 да");
+             answer = scanner.nextByte();
+             count++;
+         }
+
+         for (Details item: details){
+             if (item!=null)
+                 System.out.println(item);
+         }
 
 
-        String product = scanner.next();
-    //   Product[] products1 = operation.getProduct(product);
+
+
 
 
 

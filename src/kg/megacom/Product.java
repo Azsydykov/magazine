@@ -58,4 +58,6 @@ public abstract class Product {
     }
 
 
+    public void getInfo() {
+    }
 }

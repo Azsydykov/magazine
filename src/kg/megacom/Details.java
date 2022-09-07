@@ -3,10 +3,17 @@ package kg.megacom;
 public class Details {
 
     private Product product;
-    private int amount;
+    private double amount;
     private double discount;
 
+    public Details(Product product, double amount, double discount) {
+        this.product = product;
+        this.amount = amount;
+        this.discount = discount;
+    }
 
+    public Details() {
+    }
 
     public Product getProduct() {
         return product;
@@ -16,7 +23,7 @@ public class Details {
         this.product = product;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
