@@ -8,6 +8,7 @@ import kg.megacom.enums.ProductCategory;
 import kg.megacom.Product;
 
 import java.util.List;
+import java.util.SplittableRandom;
 
 public interface Operation {
 
@@ -15,7 +16,9 @@ public interface Operation {
     Receipt getReceipt (Order order);
 
     void getCategory();
-    Product[] getProductCategories(String category);
+    Product[] getProductByCategory(String category);
 
+Product getProductByName (String productName);
+Cashier getCashierName (String cashier);
 
 }

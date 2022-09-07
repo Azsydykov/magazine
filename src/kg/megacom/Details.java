@@ -31,4 +31,13 @@ public class Details {
     public void setDiscount(double discount) {
         this.discount = discount;
     }
+
+    @Override
+    public String toString() {
+        return "Details{" +
+                "product=" + product +
+                ", amount=" + amount +
+                ", discount=" + discount +
+                '}';
+    }
 }

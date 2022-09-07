@@ -7,9 +7,16 @@ public abstract class Product {
     private String name;
     private double cost;
     private MeasureType measureType;
-    private ProductCategory productCategory;
+    private ProductCategory category;
 
-public Product(){};
+    public Product(String name, double cost, MeasureType measureType, ProductCategory category) {
+        this.name = name;
+        this.cost = cost;
+        this.measureType = measureType;
+        this.category = category;
+    }
+
+    public Product(){};
 
     public String getName() {
         return name;
@@ -35,28 +42,20 @@ public Product(){};
         this.measureType = measureType;
     }
 
-    public ProductCategory getProductCategory() {
-        return productCategory;
+    public ProductCategory getCategory() {
+        return category;
     }
 
-    public void setProductCategory(ProductCategory productCategory) {
-        this.productCategory = productCategory;
-    }
-
-    public Product(String name, double cost, MeasureType measureType, ProductCategory productCategory) {
-        this.name = name;
-        this.cost = cost;
-        this.measureType = measureType;
-        this.productCategory = productCategory;
+    public void setCategory(ProductCategory category) {
+        this.category = category;
     }
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", cost=" + cost +
-                ", measureType=" + measureType +
-                ", productCategory=" + productCategory +
-                '}';
+        return
+                 name  +
+                ", стоимость=" + cost ;
     }
+
+
 }

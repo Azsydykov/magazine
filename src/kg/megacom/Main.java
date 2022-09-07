@@ -3,6 +3,8 @@ package kg.megacom;
 import kg.megacom.enums.ProductCategory;
 import kg.megacom.service.Operation;
 import kg.megacom.service.impl.OperationImpl;
+
+import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -17,17 +19,15 @@ public class Main {
         System.out.println("Выберите категорию продуктов");
 
         operation.getCategory();
+
         String category = scanner.next();
 
-        Product[] products = operation.getProductCategories(category);
+        Product[] products = operation.getProductByCategory(category);
 
 
+        String product = scanner.next();
+    //   Product[] products1 = operation.getProduct(product);
 
-
-
-
-        Order order= new Order();
-      //  String name = scanner.nextLine();
 
 
 

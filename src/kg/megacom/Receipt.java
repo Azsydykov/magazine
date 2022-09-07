@@ -3,17 +3,13 @@ package kg.megacom;
 public class Receipt  {
     private double totalSum;
     private double discount;
-    private String productName;
-  private double sum;
+    private ReceiptDetails[] receiptDetails;
 
-    public Receipt(double totalSum, double discount, String productName, double sum) {
+    public Receipt(double totalSum, double discount, ReceiptDetails[] receiptDetails) {
         this.totalSum = totalSum;
         this.discount = discount;
-        this.productName = productName;
-        this.sum = sum;
+        this.receiptDetails = receiptDetails;
     }
-
-    public Receipt(){};
 
     public double getTotalSum() {
         return totalSum;
@@ -31,19 +27,11 @@ public class Receipt  {
         this.discount = discount;
     }
 
-    public String getProductName() {
-        return productName;
+    public ReceiptDetails[] getReceiptDetails() {
+        return receiptDetails;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public double getSum() {
-        return sum;
-    }
-
-    public void setSum(double sum) {
-        this.sum = sum;
+    public void setReceiptDetails(ReceiptDetails[] receiptDetails) {
+        this.receiptDetails = receiptDetails;
     }
 }
