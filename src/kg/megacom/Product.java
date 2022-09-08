@@ -58,7 +58,7 @@ public abstract class Product {
 
 
     public void getInfo() {
-        System.out.println(this.name);
-        System.out.println(this.cost);
+        System.out.println(this.name +", цена:"+ this.cost);
+     //   System.out.println(this.cost);
     }
 }
