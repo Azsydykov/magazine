@@ -47,11 +47,20 @@ public class Main {
              count++;
          }
 
-         for (Details item: details){
-             if (item!=null)
-                 System.out.println(item);
-         }
+        for (Details item: details){
+            if (item!=null)
+                System.out.println(item);
+        }
 
+         System.out.println("Выберите кассира");
+         String cashier = scanner.next();
+
+         Cashier res = operation.getCashierByName(cashier);
+
+         Order order = new Order();
+         order.setDetails(details);
+
+         Receipt receipt = operation.getReceipt(order);
 
 
 

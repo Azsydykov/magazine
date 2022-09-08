@@ -19,6 +19,6 @@ public interface Operation {
     Product[] getProductByCategory(String category);
 
 Product getProductByName (String productName);
-Cashier getCashierName (String cashier);
+Cashier getCashierByName (String cashier);
 
 }

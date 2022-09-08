@@ -15,6 +15,9 @@ public class Cashier {
 
     }
 
+    public Cashier() {
+    }
+
     public String getLogin() {
         return login;
     }

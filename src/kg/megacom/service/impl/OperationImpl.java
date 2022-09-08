@@ -24,6 +24,7 @@ public class OperationImpl implements Operation {
     Product[] products = {sugar, water, tomato, apple, pear};
     Cashier[] cashiers = {aibek, jibek};
 
+
     @Override
     public Receipt getReceipt(Order order) {
         return null;
@@ -66,7 +67,7 @@ public class OperationImpl implements Operation {
     }
 
     @Override
-    public Cashier getCashierName(String cashier) {
+    public Cashier getCashierByName(String cashier) {
 
         for (Cashier item : cashiers){
             if (item.getName().equals(cashier))
