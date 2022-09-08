@@ -50,7 +50,7 @@ public class OperationImpl implements Operation {
             }
 
         }
-       System.out.println(Arrays.toString(result));
+   // System.out.println(Arrays.toString(result));
         return result;
 
     }

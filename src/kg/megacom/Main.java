@@ -25,7 +25,7 @@ public class Main {
               operation.getCategory();
               String category = scanner.next();
               Product[] products = operation.getProductByCategory(category);
-             System.out.println(products.length);
+          //   System.out.println(products.length);
 
              for (Product item:products){
                  if (item!=null)

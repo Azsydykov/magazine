@@ -52,12 +52,13 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return
-                 name  +
-                ", стоимость=" + cost ;
+        return  "name='" + name + '\'' +
+                ", cost=" + cost ;
     }
 
 
     public void getInfo() {
+        System.out.println(this.name);
+        System.out.println(this.cost);
     }
 }
