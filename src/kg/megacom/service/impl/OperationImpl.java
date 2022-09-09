@@ -28,7 +28,30 @@ public class OperationImpl implements Operation {
     @Override
     public Receipt getReceipt(Order order) {
 
-        Details[] details = order.getDetails();
+       Receipt receipt = new Receipt();
+
+
+       Details[] details = order.getDetails();
+       double totalSum = 0;
+       double totalDiscount=0;
+       ReceiptDetails[] receiptDetails = new ReceiptDetails[10];
+
+
+       for (int i = 0; i< details.length; i++ ){
+           if(details[i]!=null) {
+               Product product = details[i].getProduct();
+               double cost = product.getCost() * details[i].getAmount();
+               double discount =( cost * details[i].getDiscount()) / 100;
+               totalSum = totalSum + (cost - discount);
+               totalDiscount = totalDiscount + discount;
+               receiptDetails[i].setProductName(product.getName());
+               receiptDetails[i].setSum(cost-discount);
+
+           }
+       }
+       receipt.setName(order.getCashier().getName());
+       receipt.setTotalDiscount(totalDiscount);
+       receipt.setTotalSum(totalSum);
 
 
 

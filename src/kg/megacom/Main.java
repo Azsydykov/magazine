@@ -56,14 +56,13 @@ public class Main {
          String cashier = scanner.next();
 
          Cashier res = operation.getCashierByName(cashier);
-
          Order order = new Order();
          order.setDetails(details);
          order.setCashier(res);
 
          Receipt receipt = operation.getReceipt(order);
 
-
+        System.out.println(receipt);
 
 
 

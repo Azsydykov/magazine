@@ -28,4 +28,12 @@ public class ReceiptDetails {
     public void setSum(double sum) {
         this.sum = sum;
     }
+
+    @Override
+    public String toString() {
+        return "ReceiptDetails{" +
+                "productName='" + productName + '\'' +
+                ", sum=" + sum +
+                '}';
+    }
 }
