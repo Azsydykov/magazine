@@ -59,6 +59,7 @@ public class Main {
 
          Order order = new Order();
          order.setDetails(details);
+         order.setCashier(res);
 
          Receipt receipt = operation.getReceipt(order);
 

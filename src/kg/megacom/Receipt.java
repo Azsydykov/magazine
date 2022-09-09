@@ -2,12 +2,12 @@ package kg.megacom;
 
 public class Receipt  {
     private double totalSum;
-    private double discount;
+    private double totalDiscount;
     private ReceiptDetails[] receiptDetails;
 
-    public Receipt(double totalSum, double discount, ReceiptDetails[] receiptDetails) {
+    public Receipt(double totalSum, double totalDiscount, ReceiptDetails[] receiptDetails) {
         this.totalSum = totalSum;
-        this.discount = discount;
+        this.totalDiscount = totalDiscount;
         this.receiptDetails = receiptDetails;
     }
 
@@ -19,12 +19,12 @@ public class Receipt  {
         this.totalSum = totalSum;
     }
 
-    public double getDiscount() {
-        return discount;
+    public double getTotalDiscount() {
+        return totalDiscount;
     }
 
-    public void setDiscount(double discount) {
-        this.discount = discount;
+    public void setTotalDiscount(double totalDiscount) {
+        this.totalDiscount = totalDiscount;
     }
 
     public ReceiptDetails[] getReceiptDetails() {

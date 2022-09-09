@@ -14,7 +14,6 @@ public class Details {
 
     public Details() {
     }
-
     public Product getProduct() {
         return product;
     }

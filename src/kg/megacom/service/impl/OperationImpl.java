@@ -27,6 +27,12 @@ public class OperationImpl implements Operation {
 
     @Override
     public Receipt getReceipt(Order order) {
+
+        Details[] details = order.getDetails();
+
+
+
+
         return null;
     }
 
@@ -51,7 +57,7 @@ public class OperationImpl implements Operation {
             }
 
         }
-   // System.out.println(Arrays.toString(result));
+
         return result;
 
     }
