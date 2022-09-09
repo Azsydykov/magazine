@@ -76,6 +76,7 @@ public class OperationImpl implements Operation {
                 {
                     result[j] = products[i];
                     j++;
+
                 }
             }
 
