@@ -29,9 +29,8 @@ public class OperationImpl implements Operation {
     public Receipt getReceipt(Order order) {
 
        Receipt receipt = new Receipt();
-
-
        Details[] details = order.getDetails();
+
        double totalSum = 0;
        double totalDiscount=0;
        ReceiptDetails[] receiptDetails = new ReceiptDetails[10];
@@ -40,23 +39,24 @@ public class OperationImpl implements Operation {
        for (int i = 0; i< details.length; i++ ){
            if(details[i]!=null) {
                Product product = details[i].getProduct();
+
                double cost = product.getCost() * details[i].getAmount();
                double discount =( cost * details[i].getDiscount()) / 100;
                totalSum = totalSum + (cost - discount);
                totalDiscount = totalDiscount + discount;
-               receiptDetails[i].setProductName(product.getName());
-               receiptDetails[i].setSum(cost-discount);
 
+               receiptDetails[i] = new ReceiptDetails(product.getName(),cost-discount);
            }
        }
+       for (ReceiptDetails item: receiptDetails){
+           System.out.println(item);
+       }
+
        receipt.setName(order.getCashier().getName());
        receipt.setTotalDiscount(totalDiscount);
+       receipt.setReceiptDetails(receiptDetails);
        receipt.setTotalSum(totalSum);
-
-
-
-
-        return null;
+       return receipt;
     }
 
     @Override

@@ -3,17 +3,9 @@ package kg.megacom;
 import java.util.Arrays;
 
 public class Receipt  {
-    private double totalSum;
+
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    private double totalSum;
     private double totalDiscount;
     private ReceiptDetails[] receiptDetails;
 
@@ -26,6 +18,14 @@ public class Receipt  {
 
     public Receipt() {
     }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public double getTotalSum() {
         return totalSum;
@@ -54,7 +54,8 @@ public class Receipt  {
     @Override
     public String toString() {
         return "Receipt{" +
-                "totalSum=" + totalSum +
+                "name='" + name + '\'' +
+                ", totalSum=" + totalSum +
                 ", totalDiscount=" + totalDiscount +
                 ", receiptDetails=" + Arrays.toString(receiptDetails) +
                 '}';
