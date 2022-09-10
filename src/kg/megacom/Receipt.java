@@ -54,7 +54,7 @@ public class Receipt  {
     @Override
     public String toString() {
         return "Receipt{" +
-                "name='" + name + '\'' +
+                "Cashier name='" + name + '\'' +
                 ", totalSum=" + totalSum +
                 ", totalDiscount=" + totalDiscount +
                 ", receiptDetails=" + Arrays.toString(receiptDetails) +

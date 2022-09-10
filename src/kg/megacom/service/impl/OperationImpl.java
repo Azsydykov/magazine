@@ -35,7 +35,6 @@ public class OperationImpl implements Operation {
        double totalDiscount=0;
        ReceiptDetails[] receiptDetails = new ReceiptDetails[10];
 
-
        for (int i = 0; i< details.length; i++ ){
            if(details[i]!=null) {
                Product product = details[i].getProduct();
@@ -51,7 +50,6 @@ public class OperationImpl implements Operation {
        for (ReceiptDetails item: receiptDetails){
            System.out.println(item);
        }
-
        receipt.setName(order.getCashier().getName());
        receipt.setTotalDiscount(totalDiscount);
        receipt.setReceiptDetails(receiptDetails);
@@ -76,14 +74,10 @@ public class OperationImpl implements Operation {
                 {
                     result[j] = products[i];
                     j++;
-
                 }
             }
-
         }
-
         return result;
-
     }
 
     @Override
@@ -96,9 +90,9 @@ public class OperationImpl implements Operation {
         return null;
     }
 
+
     @Override
     public Cashier getCashierByName(String cashier) {
-
         for (Cashier item : cashiers){
             if (item.getName().equals(cashier))
                 return  item;

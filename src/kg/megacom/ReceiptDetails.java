@@ -36,4 +36,8 @@ public class ReceiptDetails {
                 ", sum=" + sum +
                 '}';
     }
+
+    public void getReceiptDetailsInfo() {
+        System.out.println(this.productName + ", сумма:" + this.sum);
+    }
 }

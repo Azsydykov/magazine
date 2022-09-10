@@ -1,5 +1,7 @@
 package kg.megacom;
 
+import java.util.Arrays;
+
 public class Order {
     private Cashier cashier;
     private Details[] details;
@@ -18,5 +20,13 @@ public class Order {
 
     public void setDetails(Details[] details) {
         this.details = details;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "cashier=" + cashier +
+                ", details=" + Arrays.toString(details) +
+                '}';
     }
 }

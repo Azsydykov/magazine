@@ -13,19 +13,19 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
         Operation operation = new OperationImpl();
         byte answer=0;
         int count =0;
         System.out.println(count);
         Details[] details = new Details[10];
-         System.out.println("Добро пожаловать");
+
+        System.out.println("Добро пожаловать");
+
          while (answer !=1){
              System.out.println("Выберите категорию продуктов");
               operation.getCategory();
               String category = scanner.next();
               Product[] products = operation.getProductByCategory(category);
-
 
              for (Product item:products){
                  if (item!=null)
@@ -60,9 +60,9 @@ public class Main {
          order.setDetails(details);
          order.setCashier(res);
 
-         Receipt receipt = operation.getReceipt(order);
 
-        System.out.println(receipt);
+         Receipt receipt = operation.getReceipt(order);
+         System.out.println(receipt);
 
 
 

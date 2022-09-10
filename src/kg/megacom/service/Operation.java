@@ -11,14 +11,10 @@ import java.util.List;
 import java.util.SplittableRandom;
 
 public interface Operation {
-
-
     Receipt getReceipt (Order order);
-
     void getCategory();
     Product[] getProductByCategory(String category);
-
-Product getProductByName (String productName);
-Cashier getCashierByName (String cashier);
+    Product getProductByName (String productName);
+    Cashier getCashierByName (String cashier);
 
 }
