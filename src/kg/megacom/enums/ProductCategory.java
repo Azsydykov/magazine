@@ -6,15 +6,12 @@ public enum ProductCategory {
     BEVERAGES ("Напитки"),
     VEGETABLES ("Овощи");
 
-private String val;
-
-ProductCategory(String val){
+    private String val;
+    ProductCategory(String val){
     this.val = val;
 }
 
     public String getVal() {
         return val;
     }
-
-
 }

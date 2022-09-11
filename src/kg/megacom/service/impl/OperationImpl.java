@@ -60,17 +60,19 @@ public class OperationImpl implements Operation {
     @Override
     public void getCategory() {
         for (ProductCategory item : ProductCategory.values()) {
-            System.out.println(item.name());
+            System.out.println(item.getVal());
         }
     }
 
     @Override
     public Product[] getProductByCategory(String category) {
 
-        Product[] result = new Product[10];
+        Product[] result;
+        result= new Product[10];
+
         int j = 0;
         for (int i = 0; i < products.length; i++) {
-            if (products[i].getCategory().equals(ProductCategory.valueOf((category)))) {
+            if (products[i].getCategory().equals(ProductCategory.valueOf(category))) {
                 {
                     result[j] = products[i];
                     j++;
